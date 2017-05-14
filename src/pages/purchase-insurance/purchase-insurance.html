@@ -1,5 +1,5 @@
 <!--
-  Generated template for the PurchaseInsurancePage page.
+  Generated template for the Checkout page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,12 +7,72 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>PurchaseInsurance</ion-title>
+    <ion-title>Checkout</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <ion-card>
+    <ion-card-header>
+    Gear review
+    </ion-card-header>
+    <ion-card-content text-center>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-3></ion-col>
+          <ion-col col-6><img src="{{ item.receipt || 'assets/camera.png'}}" alt=""></ion-col>
+        </ion-row>
+      </ion-grid>
+      
+      <br>
+      <h1>
+        {{ item.name }}
+      </h1>
+      <br>
+      {{ item.price }} €
+      <p>{{item.purchase_date}}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4>
+            
+            <img src="http://www.credit-card-logos.com/images/visa_credit-card-logos/new_visa_big.gif" style="padding:5px;">
+          </ion-col>
+          <ion-col col-8>
+            <span>JOHN DOE</span>
+            <br>
+            <span>**** **** **** 1234</span>
+            <br>
+            <span>11/2022</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-4>
+            <span>Expiration</span>
+            <br>
+            <span>11/2022</span>
+          </ion-col>
+          <ion-col col-8>
+            
+          <button ion-button block (click)="onConfirmPayment()">Proceed</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+    </ion-card-content>
+  </ion-card>
+
+    <ion-card>
+    <ion-card-content>
+      <button ion-button outline block (click)="onUpdatePaymentMethod()">Update payment method</button>
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>

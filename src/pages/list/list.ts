@@ -18,11 +18,11 @@ export class ListPage {
    
 
     this.items = [
-      {name : "iPhone 7", date_of_purchase:"2017-02-02", gear_value:777.77, files : [{path : '/assets/iphone7.jpg'}], premium_price  : 10 },
-      {name : "iPhone 7", date_of_purchase:"2017-02-02", gear_value:777.77, files : [{path : '/assets/iphone7.jpg'}], premium_price  : 10 },
-      {name : "iPhone 7", date_of_purchase:"2017-02-02", gear_value:777.77, files : [{path : '/assets/iphone7.jpg'}], premium_price  : 10 },
-      {name : "iPhone 7", date_of_purchase:"2017-02-02", gear_value:777.77, files : [{path : '/assets/iphone7.jpg'}], premium_price  : 10 },
-      {name : "iPhone 7", date_of_purchase:"2017-02-02", gear_value:777.77, files : [{path : '/assets/iphone7.jpg'}], premium_price  : 10 }
+      {name : "iPhone 7", date_of_purchase:"2017-02-02", gear_value:777.77, files : [{path : 'assets/iphone7.jpg'}], premium_price  : 10 },
+      {name : "iPhone 7", date_of_purchase:"2017-02-02", gear_value:777.77, files : [{path : 'assets/iphone7.jpg'}], premium_price  : 10 },
+      {name : "iPhone 7", date_of_purchase:"2017-02-02", gear_value:777.77, files : [{path : 'assets/iphone7.jpg'}], premium_price  : 10 },
+      {name : "iPhone 7", date_of_purchase:"2017-02-02", gear_value:777.77, files : [{path : 'assets/iphone7.jpg'}], premium_price  : 10 },
+      {name : "iPhone 7", date_of_purchase:"2017-02-02", gear_value:777.77, files : [{path : 'assets/iphone7.jpg'}], premium_price  : 10 }
     ];
   }
 

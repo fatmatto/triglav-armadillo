@@ -29685,9 +29685,9 @@ var /** @type {?} */ KEY_TAB = 9;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__components_modal_modal_component__ = __webpack_require__(68);
 /* unused harmony reexport ModalCmp */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__components_modal_modal_controller__ = __webpack_require__(139);
-/* unused harmony reexport ModalController */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_53__components_modal_modal_controller__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__components_nav_nav__ = __webpack_require__(71);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_54__components_nav_nav__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_54__components_nav_nav__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__components_nav_nav_pop__ = __webpack_require__(69);
 /* unused harmony reexport NavPop */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__components_nav_nav_pop_anchor__ = __webpack_require__(141);
@@ -29804,7 +29804,7 @@ var /** @type {?} */ KEY_TAB = 9;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_110__platform_dom_controller__ = __webpack_require__(8);
 /* unused harmony reexport DomController */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_111__platform_platform__ = __webpack_require__(3);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_111__platform_platform__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_111__platform_platform__["a"]; });
 /* unused harmony reexport setupPlatform */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_112__tap_click_haptic__ = __webpack_require__(36);
 /* unused harmony reexport Haptic */
@@ -44695,11 +44695,11 @@ var ListPage = (function () {
         // If we navigated to this page, we will have an item available as a nav param
         this.selectedItem = navParams.get('item');
         this.items = [
-            { name: "iPhone 7", date_of_purchase: "2017-02-02", gear_value: 777.77, files: [{ path: '/assets/iphone7.jpg' }], premium_price: 10 },
-            { name: "iPhone 7", date_of_purchase: "2017-02-02", gear_value: 777.77, files: [{ path: '/assets/iphone7.jpg' }], premium_price: 10 },
-            { name: "iPhone 7", date_of_purchase: "2017-02-02", gear_value: 777.77, files: [{ path: '/assets/iphone7.jpg' }], premium_price: 10 },
-            { name: "iPhone 7", date_of_purchase: "2017-02-02", gear_value: 777.77, files: [{ path: '/assets/iphone7.jpg' }], premium_price: 10 },
-            { name: "iPhone 7", date_of_purchase: "2017-02-02", gear_value: 777.77, files: [{ path: '/assets/iphone7.jpg' }], premium_price: 10 }
+            { name: "iPhone 7", date_of_purchase: "2017-02-02", gear_value: 777.77, files: [{ path: 'assets/iphone7.jpg' }], premium_price: 10 },
+            { name: "iPhone 7", date_of_purchase: "2017-02-02", gear_value: 777.77, files: [{ path: 'assets/iphone7.jpg' }], premium_price: 10 },
+            { name: "iPhone 7", date_of_purchase: "2017-02-02", gear_value: 777.77, files: [{ path: 'assets/iphone7.jpg' }], premium_price: 10 },
+            { name: "iPhone 7", date_of_purchase: "2017-02-02", gear_value: 777.77, files: [{ path: 'assets/iphone7.jpg' }], premium_price: 10 },
+            { name: "iPhone 7", date_of_purchase: "2017-02-02", gear_value: 777.77, files: [{ path: 'assets/iphone7.jpg' }], premium_price: 10 }
         ];
     }
     ListPage.prototype.itemTapped = function (event, item) {
@@ -44715,7 +44715,7 @@ var ListPage = (function () {
 }());
 ListPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-list',template:/*ion-inline-start:"/home/fat/Projects/triglav/triglav-app/src/pages/list/list.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>My stuff</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n    <ion-thumbnail item-left>\n      <img src="/assets/iphone7.jpg">\n    </ion-thumbnail>\n    <h2>{{item.name}}</h2>\n    <p>Purchased on {{item.date_of_purchase}}</p>\n    <p>Declared value € {{item.gear_value}}</p>\n    <button ion-button clear item-right>View</button>\n  </ion-item>\n  </ion-list>\n  <ion-fab right bottom>\n    <button ion-fab color="danger" (click)="addAnItem()"><ion-icon name="add"></ion-icon></button>\n  </ion-fab>\n\n  <div *ngIf="selectedItem" padding>\n    You navigated here from <b>{{selectedItem.title}}</b>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/home/fat/Projects/triglav/triglav-app/src/pages/list/list.html"*/
+        selector: 'page-list',template:/*ion-inline-start:"/home/fat/Projects/triglav/triglav-app/src/pages/list/list.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>My stuff</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n    <ion-thumbnail item-left>\n      <img src="assets/iphone7.jpg">\n    </ion-thumbnail>\n    <h2>{{item.name}}</h2>\n    <p>Purchased on {{item.date_of_purchase}}</p>\n    <p>Declared value € {{item.gear_value}}</p>\n    <button ion-button clear item-right>View</button>\n  </ion-item>\n  </ion-list>\n  <ion-fab right bottom>\n    <button ion-fab color="danger" (click)="addAnItem()"><ion-icon name="add"></ion-icon></button>\n  </ion-fab>\n\n  <div *ngIf="selectedItem" padding>\n    You navigated here from <b>{{selectedItem.title}}</b>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/home/fat/Projects/triglav/triglav-app/src/pages/list/list.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], ListPage);
@@ -55973,7 +55973,7 @@ var NewClaimPage = (function () {
 NewClaimPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-new-claim',template:/*ion-inline-start:"/home/fat/Projects/triglav/triglav-app/src/pages/new-claim/new-claim.html"*/'<!--\n  Generated template for the NewClaimPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>NewClaim</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n<ion-card>\n  <img src="/assets/camera.png"/>\n  <ion-card-content>\n    <ion-card-title>\n      Take a picture of the damage\n      </ion-card-title>\n    <p>\n      Please, take a picture of the damaged good.\n    </p>\n    <button ion-button (click)="takePicture()" block>Take picture</button>\n  </ion-card-content>\n</ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/home/fat/Projects/triglav/triglav-app/src/pages/new-claim/new-claim.html"*/,
+        selector: 'page-new-claim',template:/*ion-inline-start:"/home/fat/Projects/triglav/triglav-app/src/pages/new-claim/new-claim.html"*/'<!--\n  Generated template for the NewClaimPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>NewClaim</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n<ion-card>\n  <img src="assets/camera.png"/>\n  <ion-card-content>\n    <ion-card-title>\n      Take a picture of the damage\n      </ion-card-title>\n    <p>\n      Please, take a picture of the damaged good.\n    </p>\n    <button ion-button (click)="takePicture()" block>Take picture</button>\n  </ion-card-content>\n</ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/home/fat/Projects/triglav/triglav-app/src/pages/new-claim/new-claim.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -56020,6 +56020,7 @@ var NewItemPage = (function () {
         this.showYesNo = false;
         this.showUploadButton = false;
         this.showDateInput = false;
+        this.showItemNameInput = false;
         this.showPriceInput = false;
         this.showInsuranceInput = false;
         this.sendingAMessage = true;
@@ -56043,7 +56044,7 @@ var NewItemPage = (function () {
         this.messages.push({ text: toSend, fromUser: true });
         this.newMessage = "";
     };
-    NewItemPage.prototype.sendMessageAsAGoddamnHuman = function (msg, cb) {
+    NewItemPage.prototype.botSays = function (msg, cb) {
         var _this = this;
         this.sendingAMessage = true;
         setTimeout(function () {
@@ -56058,31 +56059,36 @@ var NewItemPage = (function () {
         var _this = this;
         console.log("Handiling state " + this.state);
         console.log("NewItemData is ", this.newItemData);
+        console.log("==================================");
         switch (this.state) {
             case "idle":
-                this.sendMessageAsAGoddamnHuman("Hello! I am Donald and I'm here to help you protect your equipment :)", function () {
-                    _this.sendMessageAsAGoddamnHuman("Do you have the receipt of the item you want to protect?", function () {
-                        _this.showYesNo = true;
-                    });
+                this.botSays("Hello! I am Drillo and I'm here to help you protect your equipment :)", function () {
+                    _this.state = 'waitingForName';
+                    _this.handleState();
+                });
+                break;
+            case "waitingForName":
+                this.botSays("What would you like to add to your account?", function () {
+                    _this.showItemNameInput = true;
                 });
                 break;
             case "waitingForReceipt":
-                this.sendMessageAsAGoddamnHuman("Please upload the receipt", function () {
+                this.botSays("Please upload the receipt", function () {
                     _this.showUploadButton = true;
                 });
                 break;
             case "waitingForPrice":
-                this.sendMessageAsAGoddamnHuman("Can you tell me how much did you pay for it?", function () {
+                this.botSays("Can you tell me how much did you pay for it?", function () {
                     _this.showPriceInput = true;
                 });
                 break;
             case "waitingForDate":
-                this.sendMessageAsAGoddamnHuman("Can you tell me when did you buy it?", function () {
+                this.botSays("Can you tell me when did you buy it?", function () {
                     _this.showDateInput = true;
                 });
                 break;
             case "waitingForInsurance":
-                this.sendMessageAsAGoddamnHuman("Let's configure your insurance plan", function () {
+                this.botSays("Let's configure your insurance plan", function () {
                     _this.showInsuranceInput = true;
                 });
                 break;
@@ -56093,12 +56099,22 @@ var NewItemPage = (function () {
                 break;
         }
     };
+    NewItemPage.prototype.handleInputForWaitingForNameState = function (msg) {
+        var _this = this;
+        this.newItemData.name = msg;
+        this.sendMessage(msg);
+        this.showItemNameInput = false;
+        this.botSays("Wow, ok!", function () {
+            _this.state = "waitingForReceipt";
+            _this.handleState();
+        });
+    };
     NewItemPage.prototype.handleInputForWaitingForReceiptState = function (msg) {
         var _this = this;
         console.log("handleInputFOrWaitingForReceipt");
         this.newItemData.receipt = msg;
         this.showUploadButton = false;
-        this.sendMessageAsAGoddamnHuman("Perfect!", function () {
+        this.botSays("Perfect!", function () {
             _this.state = "waitingForPrice";
             _this.handleState();
         });
@@ -56120,7 +56136,7 @@ var NewItemPage = (function () {
         this.newItemData.price = msg;
         this.sendMessage("€ " + msg);
         this.showPriceInput = false;
-        this.sendMessageAsAGoddamnHuman("Ok, that's seems to be a fair price.", function () {
+        this.botSays("Ok, that's seems to be a fair price.", function () {
             _this.state = "waitingForDate";
             _this.handleState();
         });
@@ -56131,7 +56147,7 @@ var NewItemPage = (function () {
         this.newItemData.purchase_date = msg;
         this.showDateInput = false;
         this.sendMessage(msg.toString());
-        this.sendMessageAsAGoddamnHuman("Alrighty, we are almost done :)", function () {
+        this.botSays("Alrighty, we are almost done :)", function () {
             _this.state = "waitingForInsurance";
             _this.handleState();
         });
@@ -56145,7 +56161,8 @@ var NewItemPage = (function () {
                 s += k + " ";
         }
         this.sendMessage(s);
-        this.sendMessageAsAGoddamnHuman("Thank you! Now i'll get you a price", function () {
+        this.newItemData.insurance = this.insurance;
+        this.botSays("Thank you! Now i'll get you a price", function () {
             _this.state = "done";
             _this.handleState();
         });
@@ -56163,9 +56180,13 @@ var NewItemPage = (function () {
             // imageData is a base64 encoded string
             _this.base64Image = "data:image/jpeg;base64," + imageData;
             // We have to do an explicit call to handleUserInput
-            _this.handleUserInput(_this.base64Image);
+            _this.handleInputForWaitingForReceiptState(_this.base64Image);
         }, function (err) {
             console.log(err);
+            // imageData is a base64 encoded string
+            _this.base64Image = "data:image/jpeg;base64," + "";
+            // We have to do an explicit call to handleUserInput
+            _this.handleInputForWaitingForReceiptState(_this.base64Image);
         });
     };
     // Takes user input and uses state to perform the correct
@@ -56175,6 +56196,9 @@ var NewItemPage = (function () {
         switch (this.state) {
             case "idle":
                 this.handleInputForIdleState(msg);
+                break;
+            case "waitingForName":
+                this.handleInputForWaitingForNameState(msg);
                 break;
             case "waitingForReceipt":
                 this.handleInputForWaitingForReceiptState(msg);
@@ -56207,7 +56231,7 @@ var NewItemPage = (function () {
 NewItemPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-new-item',template:/*ion-inline-start:"/home/fat/Projects/triglav/triglav-app/src/pages/new-item/new-item.html"*/'<!--\n  Generated template for the NewItemPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-header>\n<ion-navbar *navbar>\n    <ion-title>\n        Home\n    </ion-title>\n</ion-navbar>\n </ion-header>\n<ion-content class="home">\n<ion-list>\n       \n\n<ion-list>\n  <ion-item *ngFor="let message of messages" text-wrap>\n    <ion-avatar item-left *ngIf="message.fromUser === false">\n      <img src="/assets/bot.png">\n    </ion-avatar>\n    <ion-avatar item-right *ngIf="message.fromUser === true">\n      <img src="/assets/avatar.png">\n    </ion-avatar>\n    <h2 *ngIf="message.fromUser === false">Adam</h2>\n    <h2 *ngIf="message.fromUser === true">You</h2>\n    <p>{{message.text}}</p>\n  </ion-item>\n  <ion-item>\n  <div style="text-align: center" *ngIf="true === sendingAMessage">\n    <img src="/assets/ellipsis.svg" style="width:32px;">\n  </div>\n</ion-item>\n</ion-list>\n\n\n\n\n\n\n    <ion-grid>\n      <ion-row *ngIf="true === showYesNo">\n          <ion-col col-6>\n          <button ion-button outline block (click)="handleUserInput(true)">Yes</button>\n          </ion-col>\n          <ion-col col-6>\n          <button ion-button outline block (click)="handleUserInput(false)">No</button></ion-col>\n      </ion-row>\n\n      <ion-row *ngIf="true === showUploadButton">\n          <ion-col col-12>\n          <button ion-button outline block (click)="handleUserInput(false)">Take a picture</button></ion-col>\n      </ion-row>\n\n      <ion-row *ngIf="true === showPriceInput">\n        <ion-col>\n          <ion-item>\n            <ion-label fixed>Amount</ion-label>\n            <ion-input type="number" min="0.00" step="0.01" [(ngModel)]="chosenPrice"></ion-input>\n          </ion-item>\n          <ion-item>\n            <button ion-button block (click)="handleUserInput(chosenPrice)">Confirm</button>\n          </ion-item>\n        </ion-col>\n      </ion-row>\n\n      <ion-row *ngIf="true === showDateInput">\n        <ion-col>\n          <ion-item>\n          <ion-label fixed>Date</ion-label>\n        <ion-datetime\n          displayFormat="MMMM  DD YYYY"\n          pickerFormat="MMMM  DD YYYY"\n          [(ngModel)]="chosenDate"></ion-datetime>\n        </ion-item>\n        <ion-item>\n          <button ion-button block (click)="handleUserInput(chosenDate)">Confirm</button>\n        </ion-item>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n\n     <ion-row *ngIf="true === showInsuranceInput">\n        <ion-col>\n          <ion-list>\n            <ion-item>\n              <ion-label>Theft</ion-label>\n              <ion-checkbox color="danger" checked="true" [(ngModel)]="insurance.theft"></ion-checkbox>\n            </ion-item>\n            <ion-item>\n              <ion-label>Loss</ion-label>\n              <ion-checkbox color="danger" checked="true" [(ngModel)]="insurance.loss"></ion-checkbox>\n            </ion-item>\n            <ion-item>\n              <ion-label>Damage</ion-label>\n              <ion-checkbox color="danger" checked="true" [(ngModel)]="insurance.damage"></ion-checkbox>\n            </ion-item>\n            <ion-item>\n              <button ion-button block (click)="handleUserInput()">Confirm</button>\n            </ion-item>\n          </ion-list>\n        </ion-col>\n      </ion-row>\n  \n</ion-list>\n</ion-content>\n \n<ion-footer>\n  \n  <!-- <ion-toolbar>\n    <ion-input type="text" value="Pisello" [(ngModel)]="newMessage"></ion-input>\n    <ion-buttons end>\n      <button ion-button icon-right color="royal" (click)="sendMessage()">\n        Send\n        <ion-icon name="send" ></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-toolbar> -->\n</ion-footer>'/*ion-inline-end:"/home/fat/Projects/triglav/triglav-app/src/pages/new-item/new-item.html"*/,
+        selector: 'page-new-item',template:/*ion-inline-start:"/home/fat/Projects/triglav/triglav-app/src/pages/new-item/new-item.html"*/'<!--\n   Generated template for the NewItemPage page.\n   \n   See http://ionicframework.com/docs/components/#navigation for more info on\n   Ionic pages and navigation.\n   -->\n<ion-header>\n   <ion-navbar>\n      <ion-title>New item</ion-title>\n   </ion-navbar>\n</ion-header>\n<ion-content>\n   <ion-list>\n      <ion-item *ngFor="let message of messages" text-wrap>\n         <ion-avatar item-left *ngIf="message.fromUser === false">\n            <img src="assets/bot.png">\n         </ion-avatar>\n         <ion-avatar item-right *ngIf="message.fromUser === true">\n            <img src="assets/avatar.png">\n         </ion-avatar>\n         <h2 *ngIf="message.fromUser === false">Drillo</h2>\n         <h2 *ngIf="message.fromUser === true" style="text-align: right">You</h2>\n         <p *ngIf="message.fromUser === false" style="text-align: left">{{message.text}}</p>\n         <p *ngIf="message.fromUser === true" style="text-align: right">{{message.text}}</p>\n      </ion-item>\n      <ion-item>\n         <div style="text-align: center" *ngIf="true === sendingAMessage">\n            <img src="assets/ellipsis.svg" style="width:32px;">\n         </div>\n      </ion-item>\n   </ion-list>\n   <ion-grid>\n       <ion-row *ngIf="true === showItemNameInput">\n         <ion-col>\n            <ion-item>\n               <ion-label fixed>Name</ion-label>\n               <ion-input type="text" [(ngModel)]="chosenName"></ion-input>\n            </ion-item>\n            <ion-item>\n               <button ion-button block (click)="handleUserInput(chosenName)" outline >Confirm</button>\n            </ion-item>\n         </ion-col>\n      </ion-row>\n      <ion-row *ngIf="true === showYesNo">\n         <ion-col col-6>\n            <button ion-button outline block (click)="handleUserInput(true)">Yes</button>\n         </ion-col>\n         <ion-col col-6>\n            <button ion-button outline block (click)="handleUserInput(false)">No</button>\n         </ion-col>\n      </ion-row>\n      <ion-row *ngIf="true === showUploadButton">\n         <ion-col col-12>\n            <button ion-button outline block (click)="takePicture()">Take a picture</button>\n         </ion-col>\n      </ion-row>\n      <ion-row *ngIf="true === showPriceInput">\n         <ion-col>\n            <ion-item>\n               <ion-label fixed>Amount</ion-label>\n               <ion-input type="number" min="0.00" step="0.01" [(ngModel)]="chosenPrice"></ion-input>\n            </ion-item>\n            <ion-item>\n               <button ion-button block (click)="handleUserInput(chosenPrice)" outline >Confirm</button>\n            </ion-item>\n         </ion-col>\n      </ion-row>\n      <ion-row *ngIf="true === showDateInput">\n         <ion-col>\n            <ion-item>\n               <ion-label fixed>Date</ion-label>\n               <ion-datetime\n               displayFormat="MMMM  DD YYYY"\n               pickerFormat="MMMM  DD YYYY"\n               [(ngModel)]="chosenDate"></ion-datetime>\n            </ion-item>\n            <ion-item>\n               <button ion-button block (click)="handleUserInput(chosenDate)" >Confirm</button>\n            </ion-item>\n         </ion-col>\n      </ion-row>\n      <ion-row *ngIf="true === showInsuranceInput">\n         <ion-col>\n            <ion-list>\n               <ion-item>\n                  <ion-label>Theft</ion-label>\n                  <ion-checkbox color="danger" checked="true" [(ngModel)]="insurance.theft"></ion-checkbox>\n               </ion-item>\n               <ion-item>\n                  <ion-label>Loss</ion-label>\n                  <ion-checkbox color="danger" checked="true" [(ngModel)]="insurance.loss"></ion-checkbox>\n               </ion-item>\n               <ion-item>\n                  <ion-label>Damage</ion-label>\n                  <ion-checkbox color="danger" checked="true" [(ngModel)]="insurance.damage"></ion-checkbox>\n               </ion-item>\n               <ion-item>\n                  <button ion-button block (click)="handleUserInput()" large>Complete</button>\n               </ion-item>\n            </ion-list>\n         </ion-col>\n      </ion-row>\n   </ion-grid>\n</ion-content>'/*ion-inline-end:"/home/fat/Projects/triglav/triglav-app/src/pages/new-item/new-item.html"*/,
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_camera__["a" /* Camera */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_camera__["a" /* Camera */]) === "function" && _c || Object])
 ], NewItemPage);
@@ -56260,7 +56284,7 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/home/fat/Projects/triglav/triglav-app/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding style="text-align:center">\n  <h3>Backpack</h3>\n\n \n  <img src="/assets/backpack.png" (click)="onOpenBackpack()">\n\n \n</ion-content>\n'/*ion-inline-end:"/home/fat/Projects/triglav/triglav-app/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/home/fat/Projects/triglav/triglav-app/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding style="text-align:center">\n  <h3>Backpack</h3>\n\n \n  <img src="assets/backpack.png" (click)="onOpenBackpack()">\n\n \n</ion-content>\n'/*ion-inline-end:"/home/fat/Projects/triglav/triglav-app/src/pages/home/home.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
 ], HomePage);
@@ -74725,25 +74749,29 @@ module.exports = g;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"../pages/contract-created/contract-created.module": [
+		272,
+		1
+	],
 	"../pages/item/item.module": [
 		265,
-		9
+		11
 	],
 	"../pages/list-items/list-items.module": [
 		266,
-		5
+		0
 	],
 	"../pages/new-claim/new-claim.module": [
 		267,
-		8
+		10
 	],
 	"../pages/new-item/new-item.module": [
 		268,
-		7
+		3
 	],
 	"../pages/purchase-insurance/purchase-insurance.module": [
 		271,
-		6
+		2
 	]
 };
 function webpackAsyncContext(req) {
@@ -74778,6 +74806,7 @@ webpackAsyncContext.id = 197;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_camera__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_contract_created_contract_created__ = __webpack_require__(273);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -74785,6 +74814,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -74812,7 +74842,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_7__pages_new_item_new_item__["a" /* NewItemPage */],
             __WEBPACK_IMPORTED_MODULE_6__pages_item_item__["a" /* ItemPage */],
             __WEBPACK_IMPORTED_MODULE_8__pages_new_claim_new_claim__["a" /* NewClaimPage */],
-            __WEBPACK_IMPORTED_MODULE_9__pages_purchase_insurance_purchase_insurance__["a" /* PurchaseInsurancePage */]
+            __WEBPACK_IMPORTED_MODULE_9__pages_purchase_insurance_purchase_insurance__["a" /* PurchaseInsurancePage */],
+            __WEBPACK_IMPORTED_MODULE_13__pages_contract_created_contract_created__["a" /* ContractCreatedPage */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -74822,7 +74853,8 @@ AppModule = __decorate([
                     { loadChildren: '../pages/item/item.module#ItemPageModule', name: 'ItemPage', segment: 'item', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/new-item/new-item.module#NewItemPageModule', name: 'NewItemPage', segment: 'new-item', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/list-items/list-items.module#ListItemsPageModule', name: 'ListItemsPage', segment: 'list-items', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/purchase-insurance/purchase-insurance.module#PurchaseInsurancePageModule', name: 'PurchaseInsurancePage', segment: 'purchase-insurance', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/purchase-insurance/purchase-insurance.module#PurchaseInsurancePageModule', name: 'PurchaseInsurancePage', segment: 'purchase-insurance', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/contract-created/contract-created.module#ContractCreatedPageModule', name: 'ContractCreatedPage', segment: 'contract-created', priority: 'low', defaultHistory: [] }
                 ]
             }),
         ],
@@ -74834,7 +74866,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_7__pages_new_item_new_item__["a" /* NewItemPage */],
             __WEBPACK_IMPORTED_MODULE_6__pages_item_item__["a" /* ItemPage */],
             __WEBPACK_IMPORTED_MODULE_8__pages_new_claim_new_claim__["a" /* NewClaimPage */],
-            __WEBPACK_IMPORTED_MODULE_9__pages_purchase_insurance_purchase_insurance__["a" /* PurchaseInsurancePage */]
+            __WEBPACK_IMPORTED_MODULE_9__pages_purchase_insurance_purchase_insurance__["a" /* PurchaseInsurancePage */],
+            __WEBPACK_IMPORTED_MODULE_13__pages_contract_created_contract_created__["a" /* ContractCreatedPage */]
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__["a" /* StatusBar */],
@@ -75042,8 +75075,7 @@ var platformBrowserDynamic = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_list_list__ = __webpack_require__(47);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -75059,18 +75091,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var MyApp = (function () {
     function MyApp(platform, statusBar, splashScreen) {
         this.platform = platform;
         this.statusBar = statusBar;
         this.splashScreen = splashScreen;
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */];
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_list_list__["a" /* ListPage */];
         this.initializeApp();
         // used for an example of ngFor and navigation
         this.pages = [
-            { title: 'Home', component: __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */] },
-            { title: 'List', component: __WEBPACK_IMPORTED_MODULE_5__pages_list_list__["a" /* ListPage */] }
+            { title: 'Home', component: __WEBPACK_IMPORTED_MODULE_4__pages_list_list__["a" /* ListPage */] }
         ];
     }
     MyApp.prototype.initializeApp = function () {
@@ -75090,13 +75120,13 @@ var MyApp = (function () {
     return MyApp;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */])
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Nav */]),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Nav */])
 ], MyApp.prototype, "nav", void 0);
 MyApp = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"/home/fat/Projects/triglav/triglav-app/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/home/fat/Projects/triglav/triglav-app/src/app/app.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
 
 //# sourceMappingURL=app.component.js.map
@@ -112469,6 +112499,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dyna
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contract_created_contract_created__ = __webpack_require__(273);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PurchaseInsurancePage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -112481,6 +112512,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
 /**
  * Generated class for the PurchaseInsurancePage page.
  *
@@ -112488,27 +112521,85 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * on Ionic pages and navigation.
  */
 var PurchaseInsurancePage = (function () {
-    function PurchaseInsurancePage(navCtrl, navParams) {
+    function PurchaseInsurancePage(navCtrl, navParams, modalCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.modalCtrl = modalCtrl;
         this.item = this.navParams.get('item');
         console.log("The item is", this.item);
     }
     PurchaseInsurancePage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad PurchaseInsurancePage');
     };
+    PurchaseInsurancePage.prototype.onConfirmPayment = function () {
+        var myModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_2__contract_created_contract_created__["a" /* ContractCreatedPage */]);
+        myModal.present();
+    };
     return PurchaseInsurancePage;
 }());
 PurchaseInsurancePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-purchase-insurance',template:/*ion-inline-start:"/home/fat/Projects/triglav/triglav-app/src/pages/purchase-insurance/purchase-insurance.html"*/'<!--\n  Generated template for the PurchaseInsurancePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>PurchaseInsurance</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/fat/Projects/triglav/triglav-app/src/pages/purchase-insurance/purchase-insurance.html"*/,
+        selector: 'page-purchase-insurance',template:/*ion-inline-start:"/home/fat/Projects/triglav/triglav-app/src/pages/purchase-insurance/purchase-insurance.html"*/'<!--\n  Generated template for the Checkout page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Checkout</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-card>\n    <ion-card-header>\n    Gear review\n    </ion-card-header>\n    <ion-card-content text-center>\n      <ion-grid>\n        <ion-row>\n          <ion-col col-3></ion-col>\n          <ion-col col-6><img src="{{ item.receipt || \'assets/camera.png\'}}" alt=""></ion-col>\n        </ion-row>\n      </ion-grid>\n      \n      <br>\n      <h1>\n        {{ item.name }}\n      </h1>\n      <br>\n      {{ item.price }} €\n      <p>{{item.purchase_date}}</p>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-content>\n      <ion-grid>\n        <ion-row>\n          <ion-col col-4>\n            \n            <img src="http://www.credit-card-logos.com/images/visa_credit-card-logos/new_visa_big.gif" style="padding:5px;">\n          </ion-col>\n          <ion-col col-8>\n            <span>JOHN DOE</span>\n            <br>\n            <span>**** **** **** 1234</span>\n            <br>\n            <span>11/2022</span>\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col col-4>\n            <span>Expiration</span>\n            <br>\n            <span>11/2022</span>\n          </ion-col>\n          <ion-col col-8>\n            \n          <button ion-button block (click)="onConfirmPayment()">Proceed</button>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n      \n    </ion-card-content>\n  </ion-card>\n\n    <ion-card>\n    <ion-card-content>\n      <button ion-button outline block (click)="onUpdatePaymentMethod()">Update payment method</button>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/home/fat/Projects/triglav/triglav-app/src/pages/purchase-insurance/purchase-insurance.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */]) === "function" && _c || Object])
 ], PurchaseInsurancePage);
 
-var _a, _b;
+var _a, _b, _c;
 //# sourceMappingURL=purchase-insurance.js.map
+
+/***/ }),
+/* 271 */,
+/* 272 */,
+/* 273 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__list_list__ = __webpack_require__(47);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContractCreatedPage; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the ContractCreatedPage page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var ContractCreatedPage = (function () {
+    function ContractCreatedPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    ContractCreatedPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ContractCreatedPage');
+    };
+    ContractCreatedPage.prototype.takeMeHome = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__list_list__["a" /* ListPage */]);
+    };
+    return ContractCreatedPage;
+}());
+ContractCreatedPage = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
+        selector: 'page-contract-created',template:/*ion-inline-start:"/home/fat/Projects/triglav/triglav-app/src/pages/contract-created/contract-created.html"*/'<!--\n  Generated template for the ContractCreatedPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>success!</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n<ion-card>\n  <img src="assets/contract.jpg"/>\n  <ion-card-content>\n    <ion-card-title>\n      Your item is protected\n      </ion-card-title>\n    <p>\n      Now you can relax :)\n    </p>\n    <button ion-button (click)="takeMeHome()" block>Awesome!</button>\n  </ion-card-content>\n</ion-card>\n</ion-content>\n'/*ion-inline-end:"/home/fat/Projects/triglav/triglav-app/src/pages/contract-created/contract-created.html"*/,
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
+], ContractCreatedPage);
+
+var _a, _b;
+//# sourceMappingURL=contract-created.js.map
 
 /***/ })
 /******/ ]);

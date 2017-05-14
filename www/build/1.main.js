@@ -1,14 +1,14 @@
 webpackJsonp([1],{
 
-/***/ 268:
+/***/ 272:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__new_item__ = __webpack_require__(103);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewItemPageModule", function() { return NewItemPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contract_created__ = __webpack_require__(273);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContractCreatedPageModule", function() { return ContractCreatedPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,26 +18,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var NewItemPageModule = (function () {
-    function NewItemPageModule() {
+var ContractCreatedPageModule = (function () {
+    function ContractCreatedPageModule() {
     }
-    return NewItemPageModule;
+    return ContractCreatedPageModule;
 }());
-NewItemPageModule = __decorate([
+ContractCreatedPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__new_item__["a" /* NewItemPage */],
+            __WEBPACK_IMPORTED_MODULE_2__contract_created__["a" /* ContractCreatedPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__new_item__["a" /* NewItemPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__contract_created__["a" /* ContractCreatedPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__new_item__["a" /* NewItemPage */]
+            __WEBPACK_IMPORTED_MODULE_2__contract_created__["a" /* ContractCreatedPage */]
         ]
     })
-], NewItemPageModule);
+], ContractCreatedPageModule);
 
-//# sourceMappingURL=new-item.module.js.map
+//# sourceMappingURL=contract-created.module.js.map
 
 /***/ })
 

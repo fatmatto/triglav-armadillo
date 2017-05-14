@@ -15,6 +15,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { Camera, CameraOptions } from '@ionic-native/camera'
 
+import { ContractCreatedPage} from '../pages/contract-created/contract-created';
 @NgModule({
   declarations: [
     MyApp,
@@ -23,7 +24,8 @@ import { Camera, CameraOptions } from '@ionic-native/camera'
     NewItemPage,
     ItemPage,
     NewClaimPage,
-    PurchaseInsurancePage
+    PurchaseInsurancePage,
+    ContractCreatedPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { Camera, CameraOptions } from '@ionic-native/camera'
     NewItemPage,
     ItemPage,
     NewClaimPage,
-    PurchaseInsurancePage
+    PurchaseInsurancePage,
+    ContractCreatedPage
   ],
   providers: [
     StatusBar,

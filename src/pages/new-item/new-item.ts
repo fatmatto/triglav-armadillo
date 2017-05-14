@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PurchaseInsurancePage } from './../purchase-insurance/purchase-insurance';
-import {Camera, CameraOptions} from '@ionic-native/camera';
+import {Camera} from '@ionic-native/camera';
+
+import { ContractCreatedPage } from '../contract-created/contract-created';
 /**
  * Generated class for the NewItemPage page.
  *
@@ -22,6 +24,7 @@ export class NewItemPage {
   showYesNo  : boolean = false;;
   showUploadButton  : boolean = false;
   showDateInput  : boolean = false;
+  showItemNameInput  : boolean = false;
   showPriceInput  : boolean = false;
   showInsuranceInput : boolean = false;
   sendingAMessage : boolean = true;
@@ -65,7 +68,7 @@ export class NewItemPage {
 
 
 
-  sendMessageAsAGoddamnHuman(msg: string,cb: Function) {
+  botSays(msg: string,cb: Function) {
     this.sendingAMessage = true;
     setTimeout(()=>{
       this.messages.push({text : msg, fromUser : false});
@@ -80,32 +83,36 @@ export class NewItemPage {
   handleState() {
     console.log("Handiling state "+this.state);
     console.log("NewItemData is ",this.newItemData);
+    console.log("==================================");
     switch (this.state) {
       case "idle":
-        this.sendMessageAsAGoddamnHuman("Hello! I am Donald and I'm here to help you protect your equipment :)",()=>{
-          this.sendMessageAsAGoddamnHuman("Do you have the receipt of the item you want to protect?",() => {
-            this.showYesNo = true;
-          });
+        this.botSays("Hello! I am Drillo and I'm here to help you protect your equipment :)",()=>{
+          this.state = 'waitingForName';
+          this.handleState()
         });
-        
+      break;
+      case "waitingForName":
+      this.botSays("What would you like to add to your account?",()=>{
+         this.showItemNameInput = true;
+      });
       break;
       case "waitingForReceipt":
-      this.sendMessageAsAGoddamnHuman("Please upload the receipt",()=>{
+      this.botSays("Please upload the receipt",()=>{
          this.showUploadButton = true;
       });
       break;
       case "waitingForPrice":
-        this.sendMessageAsAGoddamnHuman("Can you tell me how much did you pay for it?",()=>{
+        this.botSays("Can you tell me how much did you pay for it?",()=>{
           this.showPriceInput = true;
         });
       break;
       case "waitingForDate":
-        this.sendMessageAsAGoddamnHuman("Can you tell me when did you buy it?",()=>{
+        this.botSays("Can you tell me when did you buy it?",()=>{
           this.showDateInput = true;
         });
       break;
       case "waitingForInsurance":
-        this.sendMessageAsAGoddamnHuman("Let's configure your insurance plan",()=>{
+        this.botSays("Let's configure your insurance plan",()=>{
           this.showInsuranceInput = true;
         });
       break;
@@ -118,13 +125,28 @@ export class NewItemPage {
     }
   }
 
+  handleInputForWaitingForNameState(msg: string) {
+    
+    this.newItemData.name = msg;
+    this.sendMessage(msg);
+    this.showItemNameInput = false;
+    this.botSays("Wow, ok!",()=>{
+      
+      this.state = "waitingForReceipt";
+      this.handleState();
+    })
+    
+  }
+
   
   handleInputForWaitingForReceiptState(msg : string){
       console.log("handleInputFOrWaitingForReceipt")
+
+
      this.newItemData.receipt = msg;
 
      this.showUploadButton = false;
-     this.sendMessageAsAGoddamnHuman("Perfect!",()=>{
+     this.botSays("Perfect!",()=>{
        this.state = "waitingForPrice";
        this.handleState()
      })
@@ -150,7 +172,7 @@ export class NewItemPage {
     this.newItemData.price = msg;
     this.sendMessage("€ "+msg);
     this.showPriceInput = false;
-    this.sendMessageAsAGoddamnHuman("Ok, that's seems to be a fair price.",()=>{
+    this.botSays("Ok, that's seems to be a fair price.",()=>{
       
       this.state = "waitingForDate";
       this.handleState();
@@ -163,7 +185,7 @@ export class NewItemPage {
     this.newItemData.purchase_date = msg;
     this.showDateInput = false;
     this.sendMessage(msg.toString());
-    this.sendMessageAsAGoddamnHuman("Alrighty, we are almost done :)",()=>{
+    this.botSays("Alrighty, we are almost done :)",()=>{
       this.state = "waitingForInsurance";
       this.handleState();
     })
@@ -182,7 +204,8 @@ export class NewItemPage {
     }
     this.sendMessage(s);
 
-    this.sendMessageAsAGoddamnHuman("Thank you! Now i'll get you a price",()=>{
+    this.newItemData.insurance = this.insurance;
+    this.botSays("Thank you! Now i'll get you a price",()=>{
       this.state = "done";
       this.handleState();
     })
@@ -202,10 +225,15 @@ export class NewItemPage {
         this.base64Image = "data:image/jpeg;base64," + imageData;
 
         // We have to do an explicit call to handleUserInput
-        this.handleUserInput(this.base64Image)
+        this.handleInputForWaitingForReceiptState(this.base64Image)
         
     }, (err) => {
         console.log(err);
+        // imageData is a base64 encoded string
+        this.base64Image = "data:image/jpeg;base64," + "";
+
+        // We have to do an explicit call to handleUserInput
+        this.handleInputForWaitingForReceiptState(this.base64Image)
     });
   }
 
@@ -220,6 +248,9 @@ export class NewItemPage {
     switch (this.state) {
       case "idle":
         this.handleInputForIdleState(msg);
+      break;
+      case "waitingForName":
+        this.handleInputForWaitingForNameState(msg);
       break;
       case "waitingForReceipt":
         this.handleInputForWaitingForReceiptState(msg);
