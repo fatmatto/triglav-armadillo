@@ -1,0 +1,121 @@
+<!--
+  Generated template for the NewItemPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+<ion-navbar *navbar>
+    <ion-title>
+        Home
+    </ion-title>
+</ion-navbar>
+ </ion-header>
+<ion-content class="home">
+<ion-list>
+       
+
+<ion-list>
+  <ion-item *ngFor="let message of messages" text-wrap>
+    <ion-avatar item-left *ngIf="message.fromUser === false">
+      <img src="/assets/bot.png">
+    </ion-avatar>
+    <ion-avatar item-right *ngIf="message.fromUser === true">
+      <img src="/assets/avatar.png">
+    </ion-avatar>
+    <h2 *ngIf="message.fromUser === false">Adam</h2>
+    <h2 *ngIf="message.fromUser === true">You</h2>
+    <p>{{message.text}}</p>
+  </ion-item>
+  <ion-item>
+  <div style="text-align: center" *ngIf="true === sendingAMessage">
+    <img src="/assets/ellipsis.svg" style="width:32px;">
+  </div>
+</ion-item>
+</ion-list>
+
+
+
+
+
+
+    <ion-grid>
+      <ion-row *ngIf="true === showYesNo">
+          <ion-col col-6>
+          <button ion-button outline block (click)="handleUserInput(true)">Yes</button>
+          </ion-col>
+          <ion-col col-6>
+          <button ion-button outline block (click)="handleUserInput(false)">No</button></ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="true === showUploadButton">
+          <ion-col col-12>
+          <button ion-button outline block (click)="handleUserInput(false)">Take a picture</button></ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="true === showPriceInput">
+        <ion-col>
+          <ion-item>
+            <ion-label fixed>Amount</ion-label>
+            <ion-input type="number" min="0.00" step="0.01" [(ngModel)]="chosenPrice"></ion-input>
+          </ion-item>
+          <ion-item>
+            <button ion-button block (click)="handleUserInput(chosenPrice)">Confirm</button>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="true === showDateInput">
+        <ion-col>
+          <ion-item>
+          <ion-label fixed>Date</ion-label>
+        <ion-datetime
+          displayFormat="MMMM  DD YYYY"
+          pickerFormat="MMMM  DD YYYY"
+          [(ngModel)]="chosenDate"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <button ion-button block (click)="handleUserInput(chosenDate)">Confirm</button>
+        </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+     <ion-row *ngIf="true === showInsuranceInput">
+        <ion-col>
+          <ion-list>
+            <ion-item>
+              <ion-label>Theft</ion-label>
+              <ion-checkbox color="danger" checked="true" [(ngModel)]="insurance.theft"></ion-checkbox>
+            </ion-item>
+            <ion-item>
+              <ion-label>Loss</ion-label>
+              <ion-checkbox color="danger" checked="true" [(ngModel)]="insurance.loss"></ion-checkbox>
+            </ion-item>
+            <ion-item>
+              <ion-label>Damage</ion-label>
+              <ion-checkbox color="danger" checked="true" [(ngModel)]="insurance.damage"></ion-checkbox>
+            </ion-item>
+            <ion-item>
+              <button ion-button block (click)="handleUserInput()">Confirm</button>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+  
+</ion-list>
+</ion-content>
+ 
+<ion-footer>
+  
+  <!-- <ion-toolbar>
+    <ion-input type="text" value="Pisello" [(ngModel)]="newMessage"></ion-input>
+    <ion-buttons end>
+      <button ion-button icon-right color="royal" (click)="sendMessage()">
+        Send
+        <ion-icon name="send" ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar> -->
+</ion-footer>
